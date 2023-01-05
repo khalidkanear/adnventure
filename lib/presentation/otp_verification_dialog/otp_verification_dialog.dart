@@ -1,0 +1,9 @@
+import 'controller/otp_verification_controller.dart';import 'package:adventure/core/app_export.dart';import 'package:adventure/widgets/custom_button.dart';import 'package:flutter/material.dart';
+// ignore_for_file: must_be_immutable
+class OtpVerificationDialog extends StatelessWidget {OtpVerificationDialog(this.controller);
+
+OtpVerificationController controller;
+
+@override Widget build(BuildContext context) { return Container(padding: getPadding(left: 55, top: 24, right: 55, bottom: 24), decoration: AppDecoration.outlineGray6001.copyWith(borderRadius: BorderRadiusStyle.roundedBorder50), child: Column(mainAxisSize: MainAxisSize.min, mainAxisAlignment: MainAxisAlignment.start, children: [Text("msg_otp_verification".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtRalewayBold34Gray90001.copyWith(height: 1.18)), Container(width: getHorizontalSize(438.00), margin: getMargin(top: 14), child: Text("msg_we_have_sent_4_digit".tr, maxLines: null, textAlign: TextAlign.center, style: AppStyle.txtRalewayMedium28Gray90076.copyWith(height: 1.18))), Padding(padding: getPadding(top: 74), child: Text("msg_enter_4_digit_code".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtRalewayMedium30.copyWith(height: 1.20))), Container(height: getVerticalSize(1.00), width: getHorizontalSize(527.00), margin: getMargin(top: 16), decoration: BoxDecoration(color: ColorConstant.gray600)), Padding(padding: getPadding(top: 34), child: Text("lbl_resend_otp".tr, overflow: TextOverflow.ellipsis, textAlign: TextAlign.left, style: AppStyle.txtRalewayBold34Bluegray900.copyWith(height: 1.18))), CustomButton(height: 93, width: 527, text: "lbl_confirm".tr, margin: getMargin(top: 50, bottom: 16), shape: ButtonShape.RoundedBorder46, fontStyle: ButtonFontStyle.RalewayBold34WhiteA700, onTap: onTapConfirm)])); } 
+onTapConfirm() { Get.toNamed(AppRoutes.registrationScreen); } 
+ }
