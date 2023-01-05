@@ -1,0 +1,3 @@
+import 'controller/splash_controller.dart';import 'package:adventure/core/app_export.dart';import 'package:flutter/material.dart';class SplashScreen extends GetWidget<SplashController> {@override Widget build(BuildContext context) { return SafeArea(child: Scaffold(backgroundColor: ColorConstant.whiteA700, body: Column(mainAxisSize: MainAxisSize.min, mainAxisAlignment: MainAxisAlignment.start, children: [Expanded(child: SingleChildScrollView(child: CustomImageView(imagePath: ImageConstant.imgLogo, height: getVerticalSize(1440.00), width: getHorizontalSize(720.00), onTap: () {onTapImgLogo();})))]))); } 
+onTapImgLogo() { Get.toNamed(AppRoutes.startScreenOneScreen); } 
+ }

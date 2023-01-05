@@ -1,0 +1,1 @@
+class Listaimedfor1ItemModel { }
